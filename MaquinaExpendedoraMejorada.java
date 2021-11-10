@@ -86,12 +86,21 @@ public class MaquinaExpendedoraMejorada {
         return cantidadDeDineroADevolver;
     } 
     
-    public int vaciarDineroDeLaMaquina() {
-        int vaciarDineroDeLaMaquina= balanceClienteActual + totalDineroAcumulado;
-        balanceClienteActual = 0;
-        totalDineroAcumulado = 0;
-        return vaciarDineroDeLaMaquina;
-        
+    public int vaciarDineroDeLaMaquina () {
+        int valorADevolver = 0;
+        if (balanceClienteActual ==0 ) {
+            valorADevolver = balanceClienteActual + totalDineroAcumulado;
+            balanceClienteActual = 0;
+            totalDineroAcumulado = 0;
+        }
+        else {
+            valorADevolver =-1;
+            System.out.println("Finalizar oparación en curso");
+            
+        }
+        return valorADevolver;
+        }
     }
-}
+
+
 
