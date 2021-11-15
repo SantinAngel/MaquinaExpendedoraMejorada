@@ -79,15 +79,15 @@ public class MaquinaExpendedoraMejorada {
             totalDineroAcumulado = totalDineroAcumulado + precioBillete;
             // Reduce el balance del cliente actual dejandole seguir utilizando la maquina
             balanceClienteActual = balanceClienteActual - precioBillete;
+            
+            if (maquinaPremio == true) {
+            System.out.println("##################");
+            System.out.println("¡Descuento del 10% del coste del billete para compras en el CarGlass!"); 
+            }
         }
         else {
             System.out.println("Necesitas introducir " + (cantidadDeDineroQueFalta) + " euros mas!");
 
-        }
-        
-        if (maquinaPremio == true) {
-            System.out.println("##################");
-            System.out.println("¡Descuento del 10% del coste del billete para compras en el CarGlass!"); 
         }
     }
 
